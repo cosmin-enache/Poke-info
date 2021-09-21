@@ -1,0 +1,29 @@
+Container[App] - Main container for all the things (except the background styling)
+    PokemonSearchbar(md-8)
+        Input
+        PokeballIcon
+    EMPTY_SPACE(md-4)
+    SearchDataContainer(md-8)
+        SortOrderBar(ASC/DESC only)
+        SortSelectBar(All of them, check MUI for what select components to use)
+            PokemonCardContainer
+                PokemonCards
+    SelectedPokemonCard(md-4)
+        PokemonCard
+        PokedexEntry(title bold)
+        PokemonDescription
+        [... decide what else to add based on received data from api]
+
+PokemonCard
+    SplashIcon
+    PokemonNumber(Faded)
+    PokemonName(Bold)
+    PokemonTypePill(Check mui, define colours depending on type in component styles)
+
+Wrap a 'PokemonDataProvider' context around <App />, with the context created separately,
+and a usePokemonData() hook, which returns useful functions such as read data and set data
+
+useEffect with axios.get to fetch pokemon data when the app loads, make sure to pass an
+empty array as a second argument so the data only gets fetched on load and on unmount only
+
+Add MUI skeletons so when the app loads it loads in a fashionable manner

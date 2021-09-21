@@ -1,0 +1,5 @@
+- Had to figure out a way to abstract the data layer from the app component,
+therefore, I created a PokemonDataProvider, which uses a custom hook to fetch
+data from the pokeApi, then stores it in PokemonDataContext.
+usePokemonData is another hook used to grab the data from PokemonDataContext in
+a clean manner.
