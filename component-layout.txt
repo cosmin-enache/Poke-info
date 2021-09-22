@@ -1,14 +1,14 @@
 Container[App] - Main container for all the things (except the background styling)
-    PokemonSearchbar(md-8)
+    PokemonSearchbar(md-7)
         Input
         PokeballIcon
-    EMPTY_SPACE(md-4)
-    SearchDataContainer(md-8)
+    EMPTY_SPACE(md-5)
+    SearchDataContainer(md-7)
         SortOrderBar(ASC/DESC only)
         SortSelectBar(All of them, check MUI for what select components to use)
-            PokemonCardContainer
-                PokemonCards
-    SelectedPokemonCard(md-4)
+        PokemonCardContainer
+            PokemonCards
+    SelectedPokemonCard(md-5)
         PokemonCard
         PokedexEntry(title bold)
         PokemonDescription

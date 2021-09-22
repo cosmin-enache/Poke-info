@@ -1,0 +1,19 @@
+.pokemon-type-pill {
+    background: gray;
+    color: black !important;
+}
+
+.pokemon-type-pill.fire {
+    background: #ff7d1a !important;
+    color: #6A2B03 !important;
+}
+
+.pokemon-type-pill.grass {
+    background: #A8F085 !important;
+    color: #256415 !important;
+}
+
+.pokemon-type-pill.water {
+    background: #8eb3ff !important;
+    color: #2c467d !important;
+}

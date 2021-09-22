@@ -1,0 +1,18 @@
+.search-order-button {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    color: #000B2B;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    position: relative;
+    top: 7px;
+    left: -3px;
+}
+
+.arrow-icon.reverse {
+    transform: rotate(180deg);
+}

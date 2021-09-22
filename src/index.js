@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {PokemonDataProvider} from "./context/pokemon-data.context";
+import { PokemonDataProvider } from "./context/pokemon-data.context";
+import PokemonFunctProvider from "./context/pokemon-funct.context";
 
 ReactDOM.render(
   <React.StrictMode>
     <PokemonDataProvider>
-        <App />
+        <PokemonFunctProvider>
+            <App />
+        </PokemonFunctProvider>
     </PokemonDataProvider>
   </React.StrictMode>,
   document.getElementById('root')

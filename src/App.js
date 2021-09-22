@@ -1,26 +1,34 @@
 import "./App.css";
 
-import { GridItem, GridContainer } from "./components/grid";
-import { ButtonContained } from "./components/button";
+import Container from '@mui/material/Container';
+import { GridItem, GridContainer } from "./components/grid/grid.component";
 
-import usePokeData from "./custom-hooks/poke-data.hook";
+import PokemonSearchbar from "./components/pokemon-searchbar/pokemon-searchbar.component";
+import SearchDataContainer from "./components/search-data-container/search-data-container.component";
+import SelectedPokemonCard from "./components/selected-pokemon-card/selected-pokemon-card.component.jsx";
+
+// Background svg
+import { ReactComponent as BackgroundSvg } from "./assets/images/poke-ball-bg.svg";
 
 const App = () => {
-    const pokeData = usePokeData();
-
     return (
-        <GridContainer spacing={2} sx={{width:"100%",textAlign: "center"}}>
-            <GridItem sm={12}>
-                {
-                    pokeData && pokeData.map(
-                        (pokemon, index) => <p key={index}>{pokemon.name}</p>
-                    )
-                }
-            </GridItem>
-            <GridItem sm={12}>
-                <ButtonContained>Click me!</ButtonContained>
-            </GridItem>
-        </GridContainer>
+        <>
+            <BackgroundSvg id="background-svg" />
+            <Container id="app-container">
+                <GridContainer spacing={2}>
+                    <GridItem xs={12} md={7}>
+                        <PokemonSearchbar />
+                    </GridItem>
+                    <GridItem xs={0} md={5} />
+                    <GridItem xs={12} md={7}>
+                        <SearchDataContainer />
+                    </GridItem>
+                    <GridItem xs={12} md={5}>
+                        <SelectedPokemonCard />
+                    </GridItem>
+                </GridContainer>
+            </Container>
+        </>
     );
 };
 

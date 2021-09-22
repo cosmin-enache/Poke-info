@@ -1,0 +1,31 @@
+.pokemon-searchbar-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.pokemon-searchbar {
+    border: none;
+    outline: none;
+    background: white;
+    box-shadow: 0px 6px 8px rgba(25, 25, 25, 0.12);
+    padding: 24px 18px 20px 18px;
+    border-radius: 12px;
+    color: black;
+    font-size: .9em;
+    width: 100%;
+}
+
+.pokeball-red-icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #FF524F;
+    border-radius: 8px;
+    padding: 2px;
+    top: 15px;
+    right: 15px;
+}
+
+.pokemon-searchbar[placeholder] {
+    color: gray;
+}
